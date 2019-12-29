@@ -1,0 +1,210 @@
+.q{
+    align-content: center;
+    border: 2px solid #FF4080;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+   
+
+}
+#qu{
+    font-size: 22px;
+    text-decoration: none;
+
+}
+a{
+    color:black;
+}
+a:hover{
+    color:white;
+}
+
+.titre{
+    text-align: center;
+}
+
+.h4{
+    text-align: center;
+    margin-left: 5%;
+}
+
+.section1 {
+    height :100%
+}
+
+.section2 {
+    height :100%
+}
+
+
+
+.note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+.form-content
+{
+    
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+.fb{
+  text-align: center;
+    size: large;
+}
+
+
+
+tweet{
+    text-align: center;
+    
+    margin-right: 250px;
+}
+iframe{
+    text-align: center;
+}
+
+.q:hover{
+    background-color: #FF4080
+}
+
+#inf{
+    font-size: 20px;
+
+}
+.info{
+    margin-top: -100px;
+    margin-bottom: 30px;
+
+    background-repeat: no-repeat;
+    
+}
+.repartition{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+body{
+    width: 100%;
+}
+
+
+.item {
+    position: relative;
+    overflow: hidden;
+  }
+  .item img {
+   width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+      height: 270px;
+      cursor: all-scroll;
+  }
+  .item:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .para{
+      padding-bottom: 95px;
+      padding-top: 120px;
+      margin-bottom: 50px;
+
+  }
+  .para p{
+      font-size: 20px;
+      color: #fff;
+  }
+
+.merci{
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.share{
+   text-align: center;
+   font-size: 22pxpx;
+   border: 1px solid black;
+   padding: 50px;
+   margin-left: 200px;
+   margin-right: 200px;
+   color: white;
+}
+
+.share2{
+    text-align: center;
+    font-size: 20px;
+}
+.restart{
+    text-align: center
+}
+.points{
+    text-align: center
+}
+#score{
+    font-size: 30px;
+}
+.scorenom{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.noregister{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.images{
+    margin-top: 100px;
+    
+}
+
+.avisquizz{
+    margin-top: 100px;
+}
+
+.btnshare{
+    text-align: center;
+    margin:auto;
+    font-size: 30px;
+    margin-bottom: 50px;
+
+}
+
+#span{
+    text-decoration:line-through;
+
+}
+
+form{
+    text-align: center;
+}
+
+.rs{
+    text-align: center;
+}
+
+.shares{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}

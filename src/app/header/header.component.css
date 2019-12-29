@@ -1,0 +1,13 @@
+link ul li a {
+  margin-right: 50%;
+  text-decoration: none;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+button {
+  background-color: #FF4080;
+}
+/*# sourceMappingURL=header.component.css.map */

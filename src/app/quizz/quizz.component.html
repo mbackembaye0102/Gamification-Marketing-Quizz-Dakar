@@ -1,0 +1,424 @@
+<app-header></app-header>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quizz</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  
+</head>
+<body>
+    <br>
+    <h3 class="titre" *ngIf="connaitre">CONNAISSEZ-VOUS CE QUARTIER DE DAKAR ?<br>
+   LEQUEL S'AGIT T-IL ?</h3> <br>
+
+    <section class="section1" *ngIf="premier">
+            <h3 class="titre">QUESTION <span style="color: #FF4080">1</span> /4</h3> <br>
+            <div class="container">
+              
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="image1">
+                        <img src="./assets/gor.png" alt="">
+                       
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="quartier">
+                     
+          
+                        <p class="q" (click)="pf(0,'medina')" ><a routerLink="" id="qu">Medina</a>  </p>
+                        <p class="q"(click)="pf(0,'yoff')" ><a routerLink="" id="qu">Yoff</a> </p>
+                        <p class="q" (click)="pf(1,'foire')"><a routerLink="" id="qu">Foire</a> </p>
+
+                       
+                     </div>
+                  </div>
+                 
+               </div>
+            </div>
+            <br>
+          
+         </section>
+
+        <div>
+<section class="section2  animated bounceInLeft" *ngIf="deuxieme"  >
+           <h3 class="titre">QUESTION <span style="color: #FF4080">2</span> /4</h3> <br><br>
+
+                <div class="container">
+                  
+                   <div class="row">
+                      <div class="col-md-6">
+                         <div class="image2">
+                            <img src="./assets/ouakam.png" alt="">
+                           
+                         </div>
+                      </div>
+                      <div class="col-md-6">
+                         <div class="quartier2">
+                             <p class="q" (click)="df(0,'medina')" ><a routerLink="" id="qu">Medina</a> </p>
+                             <p class="q"(click)="df(1,'yoff')" ><a routerLink="" id="qu">Yoff</a></p>
+                             <p class="q" (click)="df(0,'foire')"><a routerLink="" id="qu">Foire</a></p>
+
+
+                          
+                         </div>
+                      </div>
+                     
+                   </div>
+                </div>
+                <div class="restart">
+                     <button  class="btn btn-lg  oui"><span style="color:white"> <a href="" >RECOMMENCEZ!!</a> </span> </button> <br> <br>
+   
+               </div>
+             </section>
+
+        </div> 
+             <section class="section3 animated bounceInLeft" *ngIf="troisieme" >
+              <h3 class="titre">QUESTION <span style="color: #FF4080">3</span> /4</h3> <br><br>
+
+                    <div class="container">
+                      
+                       <div class="row">
+                          <div class="col-md-6">
+                             <div class="image3">
+                                <img src="./assets/ouakam.png" alt="">
+                               
+                             </div>
+                          </div>
+                          <div class="col-md-6">
+                             <div class="quartier4">
+                                   <p class="q" (click)="tf(1,'medina')" ><a routerLink="" id="qu">Medina</a> </p>
+                                   <p class="q"(click)="tf(0,'yoff')" ><a routerLink="" id="qu">Yoff</a></p>
+                                   <p class="q" (click)="tf(0,'foire')"><a routerLink="" id="qu">Foire</a></p>
+       
+    
+                              
+                             </div>
+                          </div>
+                         
+                       </div>
+                    </div>
+                    <div class="restart">
+                        <button  class="btn btn-lg  oui"><span style="color:white"> <a href="" >RECOMMENCEZ!!</a> </span> </button> <br> <br>
+      
+                  </div>
+                 </section>
+
+                 <section class="section4 animated bounceInLeft" *ngIf="quatrieme">
+                    <h3 class="titre">QUESTION <span style="color: #FF4080">4</span> /4</h3> <br><br>
+
+                        <div class="container">
+                          
+                           <div class="row">
+                              <div class="col-md-6">
+                                 <div class="image4">
+                                    <img src="./assets/ouakam.png" alt="">
+                                   
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="quartier4">
+                                      <p class="q" (click)="qf(0,'medina')" ><a [routerLink]='"."' fragment="avis" id="qu">Medina</a> </p>
+                                      <p class="q"(click)="qf(0,'yoff')" ><a [routerLink]='"."' fragment="avis" id="qu">Yoff</a> </p>
+                                      <p class="q" (click)="qf(1,'foire')" ><a [routerLink]='"."' fragment="avis" id="qu">Foire</a> </p>
+
+        
+                                  
+                                 </div>
+                              </div>
+                             
+                           </div>
+                        </div>
+                        <div class="restart">
+                              <button  class="btn btn-lg  oui"><span style="color:white"> <a routerLink="" >RECOMMENCEZ!!</a> </span> </button> <br> <br>
+            
+                        </div>
+
+                     </section>
+
+
+
+
+<br><br>
+                    <div class="info animated bounceInLeft"  *ngIf="passer>0" id="avis" >
+                        <div class="container" style="background-color: black;">
+                           
+                                   <div class="para text-center">   
+                                       <p style="color: #FF4080;"> Avant de découvrir votre résultats, il y a quelque chose que
+                                             vous devriez savoir sur les 4 quartiers que vous venez de
+                                             voir sur ces images .. </p>
+                                             
+                                             <p> Ils représentent les 8 quartiers, où les femmes subissent des maltraitances.
+                                                  </p>
+                                             
+                                             <p>  Pour lutter contre cette injustice,<span style="color: #FF4080;">êtes vous prêts à 
+                                                   ajouter votre nom et rejoindre le mouvement ?</span>  </p><br>
+                                            <style>.oui{background-color:#FF4080;}
+                                            .non{
+                                             background-color:white;
+                                            };
+                                            
+                                            </style>
+
+                                             <button  class="btn btn-lg  oui">
+                                                
+                                                   <a [routerLink]='"."' fragment="ajouter1"  >
+                                                      <span style="color:white" (click)="ajout()">JE REJOINS LA CAUSE</span>
+                                                   </a>
+                                                 
+                                             </button> <br> <br>
+                                             <button  class="btn btn-lg  non"  ><a [routerLink]='"."' fragment="sauter"  ><span (click)="btnnon()" style="color:#FF4080">NON, MERCI</span></a></button>
+                                                 </div><!--para-->
+                                                 
+                                    
+                         </div>
+                        </div>
+
+
+
+
+
+
+                   
+<div *ngIf="btn>0" class="container  animated bounceInLeft "  >
+
+      <div class="container" >
+                          
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="images" id='ajouter1'>
+                        <p class="merci">Super merci. Entrez vos coordonnées ci-dessous pour montrer que vous vous tenez à la situation des filles et des femmes partout dans le monde.
+                              Cela ne prend que quelques secondes.</p>
+                       
+                           <form  [formGroup]="users" (ngSubmit)="valider(users.value)" >
+                                 <div class="form-group row col-8 ">
+                                     <div class="col">
+                                     <input type="text" required="required" formControlName="prenom" name="prenom" class="form-control" id="inputEmail3" placeholder="Prénom">
+                                     </div>
+                                 </div>
+                                 <div class="form-group row col-8 ">
+                                     <div class="col">
+                                     <input type="text" required="required"  formControlName="nom" name="nom" class="form-control" id="inputPassword3" placeholder="Nom">
+                                     </div>
+                                 </div>
+                                 <div class="form-group row col-8 ">
+                                     <div class="col">
+                                     <input type="number" formControlName="telephone" required="required" class="form-control" id="inputPassword3" placeholder="Téléphone">
+                                     </div>
+                                 </div>
+                                 
+                                 <div class="form-group row col-6 ">
+                     
+                                     <style>.valider{background-color:#FF4080;}
+                                             .sauter{
+                                                border: 1px solid #FF4080;
+                                                background-color:white;
+                                             };
+                                                                 
+                                    </style>
+                                     <div class="col-6">
+                                          <button type="submit"  name="valider"  class="btn valider"><a [routerLink]='"."' fragment="ajouter2"  ><span (click)="btnvalider()" style="color:white">VALIDER</span></a></button>
+                     
+                                     </div>
+                                     <div class="col-6">
+                                          <button type="submit"  name="sauter"  class="btn sauter"><a [routerLink]='"."' fragment="sauter"  ><span (click)="btnnon()" style="color:#FF4080">SAUTER </span></a></button>
+                          
+                                    </div>
+                                 </div>
+                                 </form>
+                                 <br>
+                        <p style="color:grey; font-size:10px;">En validant, vous acceptez la politique de confidentialité de grow , y compris le transfert de vos informations sur les serveurs dediés. <br>
+                              Vous acceptez de recevoir des mises à jour occasionnelles sur les campagnes de grow.</p>
+                                      
+                    
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="avisquizz">
+                       <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste et, aspernatur labore quis praesentium error nisi ex, laborum mollitia sed ea iure. Omnis officiis sit, quas minus iusto ex assumenda.</p> 
+
+
+                   
+                  </div>
+               </div>
+              
+            </div>
+         </div>
+
+
+  
+
+           
+      
+
+
+</div>
+<br><br>
+
+<div class="scorenom animated bounceInLeft" *ngIf="v>0" id="ajouter2">
+   <div class="share2">
+         <p>Merci de vous être enregistré,</p>
+         <p > {{personnes.prenom}} , Voici votre résultat :</p>
+         <p id="score">Vous avez obtenu <span style="color: #FF4080; font-size:40px;"> {{cpt}}</span>  points sur <span style="color: #FF4080; font-size:40px;">4</span> </p>
+   </div>
+   
+
+   <div class="share" style="background-image: url(./assets/eau.jpg);">
+      <style>.yes{background-color:#FF4080;}
+             .no{
+                  border: 1px solid #FF4080;
+                  background-color:white;
+                };
+                                                                 
+      </style>
+       <p style="font-size:20px;"> {{personnes.prenom}} , partageriez-vous ce jeu avec vos amis pour voir s'ils peuvent battre votre score?</p>
+      
+       <div class="col-6 btnshare">
+            <button type="submit" (click)="btnyes()" class="btn yes" ><span style="color:white">OUI</span></button> &nbsp; &nbsp;&nbsp;
+            <button  type="submit" (click)="btnno()" class="btn no"><span style="color:#FF4080">NON</span></button>
+
+       </div>
+
+      
+       
+       
+   </div> <br><br>
+   <div class="points">
+         <button   class="btn btn-lg  oui">  <a [routerLink]='"."' fragment="repartition"  ><span (click)="points()" style="color:white"> VOIR LA REPARTITION DE MON SCORE </span></a> </button> <br> <br>
+
+   </div>
+</div>
+
+
+
+
+
+<div class="noregister animated bounceInLeft" *ngIf="btnn>0" id="sauter">
+      <div class="share2" >
+            <p > Merci d'avoir participé,</p>
+            <p id="score">Vous avez obtenu <span style="color: #FF4080; font-size:40px;"> {{cpt}}</span>  points sur <span style="color: #FF4080; font-size:40px;">4</span> </p>
+      </div>
+      
+   
+         <style>.yes{background-color:#FF4080;}
+                .no{
+                     border: 1px solid #FF4080;
+                     background-color:white;
+                   };
+                                                                    
+         </style>
+          <p style="font-size:20px; text-align:center;"> Allez-vous partager ce jeu avec vos amis pour voir s'ils peuvent battre votre score?</p> <br>
+         
+          <div class="col-6 btnshare" id="saute">
+               <button type="submit"  class="btn yes" ><a [routerLink]='"."' fragment="partager"  ><span (click)="btnyes()" style="color:white">OUI</span> </a></button> &nbsp; &nbsp;&nbsp;
+               <button  type="submit"  class="btn no"><a [routerLink]='"."' fragment="repartition"  ><span (click)="points()" style="color:#FF4080">NON</span></a></button>
+   
+          </div>
+
+         
+          
+          
+      <br> <br>
+      <div class="points">
+            <button   class="btn btn-lg  oui"><a [routerLink]='"."' fragment="repartition"  ><span  (click)="points()" style="color:white"> VOIR LA REPARTITION DE MON SCORE </span></a> </button> <br> <br>
+
+      </div>
+</div>
+<br><br>
+
+<div  class="repartition" *ngIf="point>0" id="repartition">
+      <div class="info  animated flipInY"   >
+
+            <div class="container">
+                      
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="parcours1">
+                              <p >Vous avez obtenu <strong style="color: #FF4080">{{cpt}} </strong>points sur 4</p>
+     
+
+                              <strong style="color: #FF4080">1. </strong> 
+                              <span id="span" *ngIf="reponse1=='medina'" class="span">Medina </span>
+                              <span id="span" *ngIf="reponse2=='yoff'" class="span">Yoff </span>
+                              <strong  style="color: #FF4080" > Foire</strong>  <br>
+                        
+                              <strong style="color: #FF4080">2. </strong>
+                               <span id="span" *ngIf="reponse1=='medina'" class="span">Medina </span>
+                              <strong  style="color: #FF4080" > Yoff</strong>
+                              <span id="span" *ngIf="reponse3=='foire'" class="span">Foire </span> <br>
+                        
+                              <strong style="color: #FF4080">3. </strong> 
+                              <strong  style="color: #FF4080" > Medina</strong> 
+                              <span id="span" *ngIf="reponse2=='yoff'" class="span">Yoff </span>
+                              <span id="span" *ngIf="reponse3=='foire'" class="span">Foire </span> <br>
+                        
+                              <strong style="color: #FF4080">4. </strong>
+                              <span id="span"  *ngIf="reponse1=='medina'" class="span">Medina </span>
+                              <span id="span" *ngIf="reponse2=='yoff'" class="span">Yoff </span>
+                              <strong  style="color: #FF4080" > Foire</strong>
+                        
+                       
+                          
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="cartecomplete">
+                              <img src="./assets/ouakam.png" alt="">   
+  
+
+                         
+                        </div>
+                     </div>
+                    
+                  </div>
+               </div>
+           
+            
+         </div> 
+</div>
+
+
+<div class="container shares" *ngIf="yes>0" id="partager">
+   
+      <div class="col-">
+            
+      </div>
+      <div class="col-8">
+            <h3 class="rs"> <strong style="color: #FF4080; font-size:50px;">Challengez vos amis !!</strong></h3> <br>
+              <h5 class="rs"> Cliquez simplement ci-dessous pour partager !</h5> <br>
+               <div class="rs" >
+                   <iframe class="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fweb.facebook.com%2Fgrowsenegal%2F&width=800px&layout=button&action=like&size=large&share=true&height=65&appId"
+                     width="200px" height="65" style="border:none;overflow:hidden"
+                        title ="" allow="encrypted-media"></iframe> 
+                        <tweet class="rs" url="https://twitter.com/growsenegal" text=" Quizz Dakar : " data-size="large"></tweet>
+   
+               </div>
+          
+      </div>
+
+      <div class="col-2">
+           
+      </div>
+           
+           
+   
+
+
+
+</div>
+    
+
+               
+         
+    
+</body>
+</html>

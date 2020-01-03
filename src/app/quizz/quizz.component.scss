@@ -1,9 +1,12 @@
+
+
 .q{
     align-content: center;
     border: 2px solid #FF4080;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
+    
    
 
 }
@@ -91,10 +94,11 @@ iframe{
 
 }
 .info{
-    margin-top: -100px;
+    margin-top: -95px;
     margin-bottom: 30px;
-
+    width:100%;
     background-repeat: no-repeat;
+    
     
 }
 .repartition{
@@ -205,6 +209,14 @@ form{
 }
 
 .shares{
-    margin-top: 100px;
-    margin-bottom: 100px;
+ 
+    margin-bottom: 200px;
+}
+
+.imageshare{
+margin-left: 50px;
+}
+
+.parcours1{
+font-size: 32px;
 }

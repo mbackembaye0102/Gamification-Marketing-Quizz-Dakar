@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { QuizzComponent } from './quizz/quizz.component';
 import { TestComponent } from './test/test.component';
-import { AViewComponent } from './aview/aview.component';
+
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
@@ -31,8 +31,7 @@ const routes: Routes = [
   {
     path: 'test/:id',
     component: TestComponent
-  },
-  { path: 'yaya',component:AViewComponent}
+  }
 ];
 
 @NgModule({

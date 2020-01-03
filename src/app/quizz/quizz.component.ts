@@ -156,7 +156,7 @@ btnno(){
 }
 
 btnvalider(){
-  this.v++;
+ 
 }
 
 btnsauter(){
@@ -169,7 +169,8 @@ points(){
 
 valider(donnee){
   console.log(donnee);
-  this.personnes=donnee
+  this.v++;
+  this.personnes=donnee;
   this.firestore.collection('quizz').add(donnee);
 }
 

@@ -202,7 +202,14 @@ form {
 }
 
 .shares {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
+}
+
+.imageshare {
+  margin-left: 50px;
+}
+
+.parcours1 {
+  font-size: 32px;
 }
 /*# sourceMappingURL=quizz.component.css.map */

@@ -14,7 +14,6 @@ import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 import { CeiboShare } from 'ng2-social-share';
 import { TestComponent } from './test/test.component';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
-import { AViewComponent } from './aview/aview.component';
 
 
 
@@ -24,8 +23,7 @@ import { AViewComponent } from './aview/aview.component';
     QuizzComponent,
     HeaderComponent,
     CeiboShare,
-    TestComponent,
-    AViewComponent
+    TestComponent
   ],
   imports: [
     BrowserModule,

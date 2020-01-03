@@ -149,19 +149,20 @@
 
 
 <br><br>
-                    <div class="info animated bounceInLeft"  *ngIf="passer>0" id="avis" >
-                        <div class="container" style="background-color: black;">
+         <div class="container "  >
+
+                    <div class="info animated bounceInLeft" style="background-image: url(./assets/fille.jpg); background-repeat: no-repeat; background-position: center;"  *ngIf="passer>0" id="avis" >
                            
                                    <div class="para text-center">   
                                        <p style="color: #FF4080;"> Avant de découvrir votre résultats, il y a quelque chose que
                                              vous devriez savoir sur les 4 quartiers que vous venez de
                                              voir sur ces images .. </p>
                                              
-                                             <p> Ils représentent les 8 quartiers, où les femmes subissent des maltraitances.
+                                             <p> Ils représentent les 8 quartiers, où les femmes subissent le plus des maltraitances.
                                                   </p>
                                              
                                              <p>  Pour lutter contre cette injustice,<span style="color: #FF4080;">êtes vous prêts à 
-                                                   ajouter votre nom et rejoindre le mouvement ?</span>  </p><br>
+                                                   ajouter votre nom et rejoindre notre cause ?</span>  </p><br>
                                             <style>.oui{background-color:#FF4080;}
                                             .non{
                                              background-color:white;
@@ -189,7 +190,8 @@
 
 
                    
-<div *ngIf="btn>0" class="container  animated bounceInLeft "  >
+<div *ngIf="btn>0" style="background-image: url(./assets/back.png); background-repeat: no-repeat; background-position: center;" 
+   class="container  animated bounceInLeft "  >
 
       <div class="container" >
                           
@@ -226,7 +228,7 @@
                                                                  
                                     </style>
                                      <div class="col-6">
-                                          <button type="submit"  name="valider"  class="btn valider"><a [routerLink]='"."' fragment="ajouter2"  ><span (click)="btnvalider()" style="color:white">VALIDER</span></a></button>
+                                          <button type="submit"  name="valider"  class="btn valider"><a [routerLink]='"."' fragment="ajouter2"  ><span (click)="valider(users.value)" style="color:white">VALIDER</span></a></button>
                      
                                      </div>
                                      <div class="col-6">
@@ -264,45 +266,50 @@
 </div>
 <br><br>
 
-<div class="scorenom animated bounceInLeft" *ngIf="v>0" id="ajouter2">
-   <div class="share2">
-         <p>Merci de vous être enregistré,</p>
-         <p > {{personnes.prenom}} , Voici votre résultat :</p>
-         <p id="score">Vous avez obtenu <span style="color: #FF4080; font-size:40px;"> {{cpt}}</span>  points sur <span style="color: #FF4080; font-size:40px;">4</span> </p>
-   </div>
+<div class="scorenom animated bounceInLeft" style="background-image: url(./assets/back.png); background-repeat: no-repeat; background-position: center;"
+ *ngIf="v>0" id="ajouter2">
+      <div class="share2" >
+            <p > Merci de vous être enregistré,</p>
+            <p><span style="font-size:30px; color:#FF4080;">{{personnes.prenom}}</span>, Voici votre résultat :</p>
+            <p id="score">Vous avez obtenu <span style="color: #FF4080; font-size:40px;"> {{cpt}}</span>  points sur <span style="color: #FF4080; font-size:40px;">4</span> </p>
+      </div>
+      
    
-
-   <div class="share" style="background-image: url(./assets/eau.jpg);">
-      <style>.yes{background-color:#FF4080;}
+        <style>.yes{background-color:#FF4080;}
              .no{
                   border: 1px solid #FF4080;
                   background-color:white;
                 };
                                                                  
       </style>
-       <p style="font-size:20px;"> {{personnes.prenom}} , partageriez-vous ce jeu avec vos amis pour voir s'ils peuvent battre votre score?</p>
+       <p style="font-size:20px; text-align:center;" > <span style="font-size:30px; color:#FF4080;">{{personnes.prenom}}</span> , partageriez-vous ce jeu avec vos amis pour voir s'ils peuvent battre votre score?</p>
       
        <div class="col-6 btnshare">
-            <button type="submit" (click)="btnyes()" class="btn yes" ><span style="color:white">OUI</span></button> &nbsp; &nbsp;&nbsp;
-            <button  type="submit" (click)="btnno()" class="btn no"><span style="color:#FF4080">NON</span></button>
-
+            <button type="submit"  class="btn yes" ><a [routerLink]='"."' fragment="partager"  ><span (click)="btnyes()" style="color:white">OUI</span> </a></button> &nbsp; &nbsp;&nbsp;
+            <button  type="submit"  class="btn no"><a [routerLink]='"."' fragment="repartition"  ><span (click)="points()" style="color:#FF4080">NON</span></a></button>
        </div>
 
-      
-       
-       
-   </div> <br><br>
-   <div class="points">
-         <button   class="btn btn-lg  oui">  <a [routerLink]='"."' fragment="repartition"  ><span (click)="points()" style="color:white"> VOIR LA REPARTITION DE MON SCORE </span></a> </button> <br> <br>
 
-   </div>
+         
+          
+          
+      <br> <br>
+      <div class="points">
+            <button   class="btn btn-lg  oui"><a [routerLink]='"."' fragment="repartition"  ><span  (click)="points()" style="color:white"> VOIR LA REPARTITION DE MON SCORE </span></a> </button> <br> <br>
+
+      </div>
+
+
+
+  
 </div>
 
 
 
 
 
-<div class="noregister animated bounceInLeft" *ngIf="btnn>0" id="sauter">
+<div class="noregister animated bounceInLeft"   style="background-image: url(./assets/back.png); background-repeat: no-repeat; background-position: center;"
+*ngIf="btnn>0" id="sauter">
       <div class="share2" >
             <p > Merci d'avoir participé,</p>
             <p id="score">Vous avez obtenu <span style="color: #FF4080; font-size:40px;"> {{cpt}}</span>  points sur <span style="color: #FF4080; font-size:40px;">4</span> </p>
@@ -335,7 +342,7 @@
 </div>
 <br><br>
 
-<div  class="repartition" *ngIf="point>0" id="repartition">
+<div  class="repartition" style="background-image: url(./assets/back.png); background-repeat: no-repeat; background-position: center;" *ngIf="point>0" id="repartition">
       <div class="info  animated flipInY"   >
 
             <div class="container">
@@ -387,32 +394,38 @@
 </div>
 
 
-<div class="container shares" *ngIf="yes>0" id="partager">
+<div class="container shares animated bounceInLeft" *ngIf="yes>0" id="partager">
+      
+               <div class="container">
+                      
+                     <div class="row">
+                        <div class="col-md-6">
+                              <h3 > <strong style="color: #FF4080; font-size:50px;">Challengez vos amis !!</strong></h3> <br>
+                              <h5 > Cliquez simplement ci-dessous pour partager !</h5> <br>
+                               <div>
+                
+                                   <iframe class="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fweb.facebook.com%2Fgrowsenegal%2F&width=200px&layout=button&action=like&size=large&share=true&height=65&appId"
+                                     width="220px" height="28" style="border:none;overflow:hidden; "
+                                        title ="" allow="encrypted-media"></iframe> 
+                
+                                        <tweet style="margin-top:-200px; " url="https://twitter.com/growsenegal" text=" Quizz Dakar : " data-size="large"></tweet>
+                
+                               </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="imageshare">
+                                 <img src="./assets/niozedve.png" alt="">   
+     
    
-      <div class="col-">
-            
+                            
+                           </div>
+                        </div>
+                       
+                     </div>
       </div>
-      <div class="col-8">
-            <h3 class="rs"> <strong style="color: #FF4080; font-size:50px;">Challengez vos amis !!</strong></h3> <br>
-              <h5 class="rs"> Cliquez simplement ci-dessous pour partager !</h5> <br>
-               <div class="rs" >
-                   <iframe class="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fweb.facebook.com%2Fgrowsenegal%2F&width=800px&layout=button&action=like&size=large&share=true&height=65&appId"
-                     width="200px" height="65" style="border:none;overflow:hidden"
-                        title ="" allow="encrypted-media"></iframe> 
-                        <tweet class="rs" url="https://twitter.com/growsenegal" text=" Quizz Dakar : " data-size="large"></tweet>
-   
-               </div>
-          
-      </div>
-
-      <div class="col-2">
-           
-      </div>
+     
            
            
-   
-
-
 
 </div>
     
